@@ -7,14 +7,11 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-
-    - name: Select Xcode Version
-      run: sudo xcode-select -switch /Applications/Xcode_15.4.app || true
 
     - name: Build iOS Application (Unsigned IPA)
       run: |
